@@ -1,5 +1,7 @@
 Product Search and Link Scraper
+
 This Python script automates the process of searching for products on Newegg and extracts links to matching product listings using Selenium and BeautifulSoup.
+
 Features
   - Accepts a user-defined search term to query Newegg's product catalog.
   - Dynamically constructs search URLs and parses results across multiple pages.
