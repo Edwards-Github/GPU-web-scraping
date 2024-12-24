@@ -21,6 +21,8 @@ page_text = doc.find("span", {"class": "list-tool-pagination-text"})
 pages = str(page_text).split("/")[-3]
 page_total = int(pages.split(">")[-1][:-1])
 
+items_found = {}
+
 # Iterate over every page
 for page in range(1, page_total + 1):
 	# get url matching user's search
@@ -31,12 +33,34 @@ for page in range(1, page_total + 1):
 	doc = BeautifulSoup(dr.page_source, "html.parser")
 
 	div = doc.find(class_="item-cells-wrap border-cells short-video-box items-list-view is-list")
-	items = div.find_all(text=re.compile(search_term))
+	if div == None:
+		continue
+	else:
+		items = div.find_all(string=re.compile(search_term))
 
 	for item in items:
 		parent = item.parent
 		link = None
-		if parent.name == "a":
-			link = parent['href']
+		if parent.name != "a":
+			continue
 
-		print(link)
+		link = parent['href']
+		next_parent = item.find_parent(class_="item-container")
+		price = next_parent.find(class_="price-current").strong
+
+		if price == None:
+			continue
+		else:
+			try:
+				int(price.string.replace(",", ""))
+				items_found[item] = {"price": price.string.replace(",", ""), "link": link}
+			except:
+				pass
+
+sorted_items = sorted(items_found.items(), key=lambda x: x[1]['price'])
+
+for item in sorted_items:
+	print(item[0])
+	print(f"${item[1]['price']}")
+	print(item[1]['link'])
+	print("------------------------------------------")
