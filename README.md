@@ -17,9 +17,9 @@ To run this project, you'll need:
 
 ## Installation
 1. Clone this repository to your local machine:
-   ```
-   https://github.com/Edwards-Github/GPU-web-scraping.git
-   ```
+```
+https://github.com/Edwards-Github/GPU-web-scraping.git
+```
 2. Install the required Python libraries:
   ```
   pip install selenium beautifulsoup4
