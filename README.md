@@ -48,12 +48,16 @@ https://github.com/Edwards-Github/GPU-web-scraping.git
 
 ## Example Output
 ```
-GeForce RTX 4090
-$1,599
-https://www.newegg.com/productpageexample
+ASUS TUF Gaming GeForce RTX 4090 Gaming Graphics Card (PCIe 4.0, 24GB GDDR6X, HDMI 2.1a, DisplayPort 1.4a) TUF-RTX4090-24G-GAMING
+$3399
+https://www.newegg.com/asus-geforce-rtx-4090-tuf-rtx4090-24g-gaming/p/N82E16814126596
 ------------------------------------------------------------------------------------------------------------------------
-GeForce RTX 3080
-$699
-https://www.newegg.com/productpageexample
+MSI Ventus GeForce RTX 4090 24GB GDDR6X PCI Express 4.0 Video Card RTX 4090 VENTUS 3X E 24G OC
+$3399
+https://www.newegg.com/msi-video-card-rtx-4090-ventus-3x-e-24g-oc-nvidia-geforce-rtx-4090-24gb-gddr6x/p/N82E16814137842
+------------------------------------------------------------------------------------------------------------------------
+ABS Vortex-X Aqua High Performance Gaming PC – Intel i9 13900K - GeForce RTX 4090 - 32GB DDR5 5600MHz - 2TB M.2 NVMe SSD – VXA139KF490
+$3599
+https://www.newegg.com/abs-vxa139k490-vortex-x-aqua/p/N82E16883360371C
 ------------------------------------------------------------------------------------------------------------------------
 ```
